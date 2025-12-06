@@ -11,7 +11,13 @@ services:
         sync: false
       - key: API_HASH
         sync: false
+      - key: SESSION_STRING
+        sync: false
       - key: MONGO_DB_URI
+        sync: false
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
         sync: false
       - key: OWNER_ID
         sync: false
@@ -28,7 +34,13 @@ services:
         fromService: banana-bot-web
       - key: API_HASH
         fromService: banana-bot-web
+      - key: SESSION_STRING
+        fromService: banana-bot-web
       - key: MONGO_DB_URI
+        fromService: banana-bot-web
+      - key: SPOTIFY_CLIENT_ID
+        fromService: banana-bot-web
+      - key: SPOTIFY_CLIENT_SECRET
         fromService: banana-bot-web
       - key: OWNER_ID
         fromService: banana-bot-web
