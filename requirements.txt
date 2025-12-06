@@ -1,9 +1,18 @@
-pyrogram>=2.0.0
-pytgcalls>=3.0.0
-pymongo>=4.0.0
-python-dotenv>=1.0.0
-yt-dlp>=2023.11.16
-youtube-search-python>=1.6.6
-spotipy>=2.23.0
-Flask>=2.3.0
-gunicorn>=20.1.0
+# Core
+pyrogram==2.0.106
+pytgcalls==3.0.0.dev29
+tgcrypto==1.2.5
+
+# Database
+pymongo==4.5.0
+python-dotenv==1.0.0
+
+# Music
+yt-dlp==2023.11.16
+youtube-search-python==1.6.6
+spotipy==2.23.0
+requests==2.31.0
+
+# Web Server (Render)
+Flask==2.3.3
+gunicorn==20.1.0
