@@ -1,18 +1,23 @@
-# Core
+# Core Dependencies
 pyrogram==2.0.106
-pytgcalls==3.0.0.dev29
 tgcrypto==1.2.5
-
-# Database
-pymongo==4.5.0
 python-dotenv==1.0.0
 
-# Music
-yt-dlp==2023.11.16
-youtube-search-python==1.6.6
-spotipy==2.23.0
-requests==2.31.0
+# PyTgCalls - Use stable version
+pytgcalls==3.0.0.dev24  # This version is available
 
-# Web Server (Render)
-Flask==2.3.3
-gunicorn==20.1.0
+# Database
+pymongo==4.6.0
+
+# Music & Audio
+yt-dlp==2024.7.23  # Latest stable
+youtube-search-python==1.6.10
+spotipy==2.23.0
+requests==2.32.3
+
+# Web Server (for Render)
+Flask==3.0.3
+gunicorn==22.0.0
+
+# Utilities
+pillow==10.4.0
