@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: banana-bot-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: MONGO_DB_URI
+        sync: false
+      - key: OWNER_ID
+        sync: false
+
+  - type: worker
+    name: banana-bot-worker
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        fromService: banana-bot-web
+      - key: API_ID
+        fromService: banana-bot-web
+      - key: API_HASH
+        fromService: banana-bot-web
+      - key: MONGO_DB_URI
+        fromService: banana-bot-web
+      - key: OWNER_ID
+        fromService: banana-bot-web
